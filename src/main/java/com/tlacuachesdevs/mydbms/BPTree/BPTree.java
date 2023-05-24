@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tlacuachesdevs.mydbms.BPTree;
+
+import javax.swing.JTextArea;
 
 /**
  *
@@ -139,28 +136,48 @@ public class BPTree<Tipo> {
 
     }
 
-    public void Show() {
-        Show(root, 0);
+    public void ShowConsole() {
+        ShowConsole(root, 0);
     }
 
-    private void Show(BPTNode<Tipo> x, int nivel) {
+    private void ShowConsole(BPTNode<Tipo> x, int nivel) {
+        StringBuilder spaces = new StringBuilder();
+        for (int i = 0; i < nivel; i++) {
+            spaces.append("\t");
+        }
+
         if (x != null) {
-            if (x.leaf) {
-                for (int i = 0; i < x.n; i++) {
-                    for (int j = 0; j < nivel; j++) {
-                        System.out.print("\t");
-                    }
-                    System.out.println(x.key[i].llave);
+            for (int i = 0; i < x.n; i++) {
+                if (!x.leaf) {
+                    ShowConsole(x.child[i], nivel + 1);
                 }
-            } else {
-                for (int i = 0; i < x.n; i++) {
-                    Show(x.child[i], nivel + 1);
-                    for (int j = 0; j < nivel; j++) {
-                        System.out.print("\t");
-                    }
-                    System.out.println(x.key[i].llave);
+                System.out.println(spaces.toString() + "[" + x.key[i].llave + "]");
+            }
+            if (!x.leaf) {
+                ShowConsole(x.child[x.n], nivel + 1);
+            }
+        }
+    }
+
+    public void Show(JTextArea bptJTextArea) {
+        Show(root, 0, bptJTextArea);
+    }
+
+    private void Show(BPTNode<Tipo> x, int nivel, JTextArea bptJTextArea) {
+        StringBuilder spaces = new StringBuilder();
+        for (int i = 0; i < nivel; i++) {
+            spaces.append("\t");
+        }
+
+        if (x != null) {
+            for (int i = 0; i < x.n; i++) {
+                if (!x.leaf) {
+                    Show(x.child[i], nivel + 1, bptJTextArea);
                 }
-                Show(x.child[x.n], nivel + 1);
+                bptJTextArea.append(spaces.toString() + "[" + x.key[i].llave + "]\n");
+            }
+            if (!x.leaf) {
+                Show(x.child[x.n], nivel + 1, bptJTextArea);
             }
         }
     }

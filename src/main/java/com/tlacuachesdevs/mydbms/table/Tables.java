@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tlacuachesdevs.mydbms.table;
 
 import com.tlacuachesdevs.mydbms.util.LinkedList;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -22,6 +19,16 @@ public class Tables {
         tables.add(table);
     }
 
+    public boolean containsTable(String tableName) {
+        for (int i = 0; i < tables.size(); i++) {
+            Table table = tables.get(i);
+            if (table.getTableName().equals(tableName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Table getTable(String tableName) {
         for (int i = 0; i < tables.size(); i++) {
             Table table = tables.get(i);
@@ -36,10 +43,10 @@ public class Tables {
         return tables;
     }
 
-    public void printTables() {
+    public void printTables(JTextArea databaseJTextArea) {
         for (int i = 0; i < tables.size(); i++) {
-            tables.get(i).printTable();
-            System.out.println();
+            tables.get(i).printTable(databaseJTextArea);
+            databaseJTextArea.append("\n");
         }
     }
 }

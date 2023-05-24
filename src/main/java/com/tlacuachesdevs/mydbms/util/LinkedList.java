@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tlacuachesdevs.mydbms.util;
 
 import java.util.*;
@@ -75,13 +71,12 @@ public class LinkedList<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        // Asumiendo que tienes un método getNodeAt(int index) que devuelve el nodo en un índice dado
         return new Iterator<T>() {
             private int currentIndex = 0;
 
             @Override
             public boolean hasNext() {
-                return currentIndex < size();  // asumiendo que tienes un método size()
+                return currentIndex < size();
             }
 
             @Override
@@ -89,7 +84,7 @@ public class LinkedList<T> implements Iterable<T> {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
-                T data = getNodeAt(currentIndex).data;  // asumiendo que tu Node tiene un campo de datos
+                T data = getNodeAt(currentIndex).data;
                 currentIndex++;
                 return data;
             }

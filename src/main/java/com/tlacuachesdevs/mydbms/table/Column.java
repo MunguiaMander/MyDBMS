@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tlacuachesdevs.mydbms.table;
 
 import java.util.*;
@@ -10,7 +6,7 @@ public class Column<T> {
 
     private String columnName;
     private boolean isPK;
-    private String refTable; //nombre de la tabla a la que hace referencia si es FK
+    private String refTable; //reference table name FK
     private boolean isFK;
     private List<T> data;
 

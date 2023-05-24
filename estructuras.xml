@@ -15,9 +15,9 @@
         <Valor>int</Valor>
         <clave>NoFactura</clave>
         <relacion>
-		<Nit>int</Nit>
-		<tabla>cliente</tabla>
-	</relacion>
+            <Nit>int</Nit>
+            <tabla>cliente</tabla>
+        </relacion>
     </estructura>
     <estructura>
         <tabla>producto</tabla>

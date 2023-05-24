@@ -1,6 +1,6 @@
 package com.tlacuachesdevs.mydbms;
 
-import com.tlacuachesdevs.mydbms.gui.MainJFrame;
+import com.tlacuachesdevs.mydbms.gui.LoginJFrame;
 
 
 /**
@@ -10,7 +10,7 @@ import com.tlacuachesdevs.mydbms.gui.MainJFrame;
 public class MyDBMS {
 
     public static void main(String[] args) {
-        MainJFrame runMyDBMS = new MainJFrame();
+        LoginJFrame runMyDBMS = new LoginJFrame();
         runMyDBMS.setVisible(true);
     }
 }

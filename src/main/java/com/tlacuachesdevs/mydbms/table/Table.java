@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tlacuachesdevs.mydbms.table;
 
 import java.util.*;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -32,6 +29,24 @@ public class Table {
         this.columns.add(column);
     }
 
+    public boolean containsColumn(String columnName) {
+        for (Column column : columns) {
+            if (column.getColumnName().equals(columnName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Column getColumn(String columnName) {
+        for (Column column : columns) {
+            if (column.getColumnName().equals(columnName)) {
+                return column;
+            }
+        }
+        return null;
+    }
+
     public void markColumnAsPK(String columnName) {
         for (Column column : columns) {
             if (column.getColumnName().equals(columnName)) {
@@ -49,31 +64,32 @@ public class Table {
         }
     }
 
-    public void printTable() {
-        System.out.println("Table: " + tableName);
+    public void printTable(JTextArea databaseJTextArea) {
+        databaseJTextArea.append("Table: " + tableName + "\n");
 
         // Print column names
         for (Column column : columns) {
-            System.out.print(column.getColumnName());
+            String columnName = column.getColumnName();
             if (column.getIsPK()) {
-                System.out.print(" (PK)");
+                columnName += " (PK)";
             }
             if (column.getIsFK()) {
-                System.out.print(" (FK)");
+                columnName += " (FK)";
             }
-            System.out.print("\t");
+            databaseJTextArea.append(String.format("%-30s", columnName));
         }
-        System.out.println();
+        databaseJTextArea.append("\n");
 
         // Assume all columns have the same number of rows
         int numRows = columns.get(0).getData().size();
 
         for (int i = 0; i < numRows; i++) {
             for (Column column : columns) {
-                System.out.print(column.getData().get(i) + "\t");
+                databaseJTextArea.append(String.format("%-30s", column.getData().get(i)));
             }
-            System.out.println();
+            databaseJTextArea.append("\n");
         }
+        databaseJTextArea.append("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     }
 
 }

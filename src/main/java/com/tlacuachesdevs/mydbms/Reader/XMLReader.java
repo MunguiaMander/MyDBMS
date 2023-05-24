@@ -1,7 +1,6 @@
 package com.tlacuachesdevs.mydbms.Reader;
 
 import com.tlacuachesdevs.mydbms.table.*;
-import com.tlacuachesdevs.mydbms.util.LinkedList;
 import java.io.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;

@@ -1,0 +1,148 @@
+<entrada>
+    <cliente>
+        <Nit>514532</Nit>
+        <Nombre>Marco Jose</Nombre>
+        <Apellido>Munguia Alva</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>646</Nit>
+        <Nombre>Juan Pedro</Nombre>
+        <Apellido>Gonzalez Lopez</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>24</Nit>
+        <Nombre>Maria Fernanda</Nombre>
+        <Apellido>Sanchez Ramirez</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>3242</Nit>
+        <Nombre>Carlos Alberto</Nombre>
+        <Apellido>Rodriguez Perez</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>35</Nit>
+        <Nombre>Andrea Patricia</Nombre>
+        <Apellido>Martinez Castro</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>456</Nit>
+        <Nombre>Roberto Enrique</Nombre>
+        <Apellido>Reyes Diaz</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>4</Nit>
+        <Nombre>Luisa Fernanda</Nombre>
+        <Apellido>Ortiz Morales</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>261</Nit>
+        <Nombre>Miguel Angel</Nombre>
+        <Apellido>Castillo Guerrero</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>2465</Nit>
+        <Nombre>Sandra Luz</Nombre>
+        <Apellido>Gutierrez Lugo</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>2342</Nit>
+        <Nombre>Arturo Rafael</Nombre>
+        <Apellido>Escobar Medina</Apellido>
+    </cliente>
+    <cliente>
+        <Nit>1514</Nit>
+        <Nombre>Luis</Nombre>
+        <Apellido>Gomez</Apellido>
+    </cliente>
+    <factura>
+        <NoFactura>20101</NoFactura>
+        <Nit>10101</Nit>
+        <Fecha>2023-05-22</Fecha>
+        <Lugar>Bogotá</Lugar>
+        <Valor>150000</Valor>
+    </factura>
+    <producto>
+        <Codigo>30101</Codigo>
+        <Nombre>Televisor Samsung</Nombre>
+        <Descripcion>TV Samsung 55" 4K UHD</Descripcion>
+        <Precio>2500000</Precio>
+    </producto>
+    <empleado>
+        <Identificacion>40101</Identificacion>
+        <Nombre>Juan</Nombre>
+        <Apellido>Pérez</Apellido>
+        <Cargo>Vendedor</Cargo>
+        <Sueldo>3000000</Sueldo>
+    </empleado>
+    <pedido>
+        <NoPedido>50101</NoPedido>
+        <CodigoProducto>30101</CodigoProducto>
+        <NoFactura>20101</NoFactura>
+        <Cantidad>2</Cantidad>
+    </pedido>
+    <proveedor>
+        <Id>60101</Id>
+        <Nombre>ElectroWorld</Nombre>
+        <Direccion>Calle 123 #45-67</Direccion>
+        <Telefono>31122334455</Telefono>
+    </proveedor>
+    <almacen>
+        <IdAlmacen>70101</IdAlmacen>
+        <Nombre>Almacen Principal</Nombre>
+        <Ubicacion>Bogotá</Ubicacion>
+    </almacen>
+    <inventario>
+        <IdInventario>80101</IdInventario>
+        <IdAlmacen>70101</IdAlmacen>
+        <CodigoProducto>30101</CodigoProducto>
+        <Cantidad>50</Cantidad>
+    </inventario>
+    <cliente>
+        <Nit>10102</Nit>
+        <Nombre>Carlos</Nombre>
+        <Apellido>Rodriguez</Apellido>
+    </cliente>
+    <factura>
+        <NoFactura>20102</NoFactura>
+        <Nit>10102</Nit>
+        <Fecha>2023-05-23</Fecha>
+        <Lugar>Medellin</Lugar>
+        <Valor>200000</Valor>
+    </factura>
+    <producto>
+        <Codigo>30102</Codigo>
+        <Nombre>Laptop Dell</Nombre>
+        <Descripcion>Laptop Dell Inspiron 14</Descripcion>
+        <Precio>3000000</Precio>
+    </producto>
+    <empleado>
+        <Identificacion>40102</Identificacion>
+        <Nombre>Maria</Nombre>
+        <Apellido>Martinez</Apellido>
+        <Cargo>Gerente</Cargo>
+        <Sueldo>5000000</Sueldo>
+    </empleado>
+    <pedido>
+        <NoPedido>50102</NoPedido>
+        <CodigoProducto>30102</CodigoProducto>
+        <NoFactura>20102</NoFactura>
+        <Cantidad>1</Cantidad>
+    </pedido>
+    <proveedor>
+        <Id>60102</Id>
+        <Nombre>CompTech</Nombre>
+        <Direccion>Avenida 76 #54-32</Direccion>
+        <Telefono>32255446677</Telefono>
+    </proveedor>
+    <almacen>
+        <IdAlmacen>70102</IdAlmacen>
+        <Nombre>Almacen Secundario</Nombre>
+        <Ubicacion>Medellin</Ubicacion>
+    </almacen>
+    <inventario>
+        <IdInventario>80102</IdInventario>
+        <IdAlmacen>70102</IdAlmacen>
+        <CodigoProducto>30102</CodigoProducto>
+        <Cantidad>30</Cantidad>
+    </inventario>
+</entrada>
