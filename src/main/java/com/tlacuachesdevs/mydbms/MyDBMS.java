@@ -1,5 +1,7 @@
 package com.tlacuachesdevs.mydbms;
 
+import com.tlacuachesdevs.mydbms.gui.MainJFrame;
+
 
 /**
  *

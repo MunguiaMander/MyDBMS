@@ -1,4 +1,4 @@
-package com.tlacuachesdevs.mydbms;
+package com.tlacuachesdevs.mydbms.managers;
 
 
 import java.awt.event.ActionEvent;
