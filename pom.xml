@@ -22,4 +22,21 @@
             <version>1.7.30</version> <!-- use the version compatible with your project -->
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version> <!-- usa la versión más reciente del complemento -->
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.tlacuachesdevs.mydbms.MyDBMS</mainClass> <!-- reemplaza con tu clase principal -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
